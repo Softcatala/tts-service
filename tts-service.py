@@ -96,7 +96,7 @@ def voice_api():
         usage = Usage()
         usage.log()
         return send_file(mp3_file.name, mimetype="audio/mp3",
-                        as_attachment=False, attachment_filename=mp3_file.name)
+                        as_attachment=False, download_name=mp3_file.name)
 
 @app.route('/speak/stats/', methods=['GET'])
 def stats():

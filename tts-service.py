@@ -88,7 +88,7 @@ def voice_api():
         p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
         p.wait()
 
-        cmd = '{0} -f {1} {2}'.\
+        cmd = '{0} -f {1} {2} 2> /dev/null'.\
               format(lame, wave_file.name, mp3_file.name)
         p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
         p.wait()
